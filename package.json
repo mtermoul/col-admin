@@ -5,15 +5,27 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "server": "node server/index.js"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "@babel/polyfill": "^7.0.0-rc.1",
+    "moment": "^2.22.2",
+    "pg-restify": "^0.5.0",
+    "restify": "^7.2.1",
+    "restify-cors-middleware": "^1.1.1",
+    "underscore": "^1.9.1",
+    "vue": "^2.5.17",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.0.1",
+    "vuetify": "^1.2.0",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
+    "vue-cli-plugin-vuetify": "^0.2.1",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -25,7 +37,9 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
@@ -38,6 +52,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 8"
+    "not ie <= 10"
   ]
 }
