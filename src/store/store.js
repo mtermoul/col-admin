@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VueResource from 'vue-resource'
 import _ from 'underscore'
+import cosmicStore from './modules/cosmic'
 
 Vue.use(Vuex)
 Vue.use(VueResource)
@@ -65,5 +66,8 @@ export default new Vuex.Store({
             states = _.chain(state.students).pluck('state').uniq().sortBy((value) => value).value()
             commit('SET_STATES', states)
         }
+    },
+    modules: {
+        cosmicStore
     }
 })

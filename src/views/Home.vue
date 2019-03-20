@@ -253,7 +253,7 @@ export default {
             this.filterTerm2 = ''
             this.filterTermMask = ''
             this.filterTermLabel = 'Filter'
-            this.filterTermRules = [],
+            this.filterTermRules = []
             this.filterLookupValue = ''
             this.filterLookupItems = []
             this.filterLookupLabel = ''

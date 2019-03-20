@@ -1,5 +1,24 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>About Page</h1>
+    <p>Col-Admin is an all-in-one utility page to help teachers...</p>
   </div>
 </template>
+
+<script>
+export default {
+    name: 'about',
+    methods: {
+        importStudents () {
+            this.$store.dispatch('importData')
+        }
+    }
+}
+</script>
+
+<style>
+.about {
+    padding-top: 10px;
+    text-align: center;
+}
+</style>
