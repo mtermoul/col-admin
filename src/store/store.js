@@ -40,27 +40,28 @@ export default new Vuex.Store({
         }
     },
     actions: {
-        async fetchStudents ({commit, dispatch}) {
-            const pageSize = 25
-            let recCount = 25
-            let currentPage = 1
-            while(recCount >= pageSize || currentPage === 100) {
-                try {
-                    let response = await Vue.http.get('vwstudent?page=' + currentPage)
-                    recCount = response.data.length
-                    if( response.data.length > 0) {
-                        commit('ADD_STUDENTS', response.data)
-                        // if(!state.isDataReady) commit('SET_IS_DATA_READY', true)
-                    }
-                    currentPage += 1
-                } catch (error) {
-                    console.warn('---- REST ERROR: ', error)
-                }
-            }
-            commit('SET_IS_DATA_READY', true)
-            dispatch('fetchStates')
-
-        },
+        // fetchStudents has been moved to Cosmic JS file.
+        // this function will fetch data from Postgres db via rest API
+        // async fetchStudents ({commit, dispatch}) {
+        //     const pageSize = 25
+        //     let recCount = 25
+        //     let currentPage = 1
+        //     while(recCount >= pageSize || currentPage === 100) {
+        //         try {
+        //             let response = await Vue.http.get('vwstudent?page=' + currentPage)
+        //             recCount = response.data.length
+        //             if( response.data.length > 0) {
+        //                 commit('ADD_STUDENTS', response.data)
+        //                 // if(!state.isDataReady) commit('SET_IS_DATA_READY', true)
+        //             }
+        //             currentPage += 1
+        //         } catch (error) {
+        //             console.warn('---- REST ERROR: ', error)
+        //         }
+        //     }
+        //     commit('SET_IS_DATA_READY', true)
+        //     dispatch('fetchStates')
+        // },
         fetchStates ({commit, state}) {
             let states = []
             states = _.chain(state.students).pluck('state').uniq().sortBy((value) => value).value()

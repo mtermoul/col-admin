@@ -25,7 +25,43 @@ const actions = {
             await Cosmic.addObject(payload)
         }
         console.log('----- data import completed -----')
+    },
+    async fetchStudents ({commit, dispatch}) {
+        const recordLimit = 25
+        let skipPos = 0
+        let fetchMore = true
+
+        while (fetchMore) {
+            try {
+                const params = {
+                    type: 'students',
+                    limit: recordLimit,
+                    skip: skipPos
+                }
+                let res = await Cosmic.getObjects(params)
+                if (res.objects && res.objects.length) {
+                    let data = res.objects.map((item) => {
+                        return {...item.metadata, id: item.metadata.sid,
+                            firstName: item.metadata.firstname,
+                            lastName: item.metadata.lastname }
+                    })
+                    commit('ADD_STUDENTS', data)
+                    commit('SET_IS_DATA_READY', true)
+                    // if fetched recodrs lenght is less than 25 then we have end of list
+                    if (res.objects.length < recordLimit) fetchMore = false
+                } else {
+                    fetchMore = false
+                }
+                skipPos += recordLimit
+            }
+            catch (error) {
+                console.log(error)
+                fetchMore = false
+            }
+        }
+        dispatch('fetchStates')
     }
+
 }
 
 export default {
