@@ -1,6 +1,6 @@
 # col-admin: Client side grid lookup app with Vue, Cosmic JS, and Vuetify
 
-<img src="./images/main_screen_large.png" alt="Col-Admin Main Screen" />
+<img src="./article/images/main_screen_large.png" alt="Col-Admin Main Screen" />
 
 # Links
 
@@ -44,4 +44,4 @@ npm run lint
 
 ```
 
-<img src="./images/main_screen_large.png" alt="Col-Admin Main Screen" />
+<img src="./article/images/main_screen_large.png" alt="Col-Admin Main Screen" />
