@@ -4,10 +4,10 @@
 
 ## TL;DR
 
-* <a href="https://vuejs.org/">Vue</a>
-* <a href="https://vuex.vuejs.org/">Vuex</a>
-* <a href="https://vuetifyjs.com/en/">Vuetify</a>
-* <a href="https://cosmicjs.com/">Cosmic JS</a>
+* <a href="https://vuejs.org/" target="_blank">Vue</a>
+* <a href="https://vuex.vuejs.org/" target="_blank">Vuex</a>
+* <a href="https://vuetifyjs.com/en/" target="_blank">Vuetify</a>
+* <a href="https://cosmicjs.com/" target="_blank">Cosmic JS</a>
 
 ## Intro
 
@@ -48,7 +48,7 @@ So basically we can build 12 comparison function that we can use with all our fi
 
 ## Starting you Vue app
 
-To start a new app, you will need to install <a href="https://vuejs.org/">Vue</a> and open new terminal window and type the following:
+To start a new app, you will need to install <a href="https://vuejs.org/" target="_blank">Vue</a> and open new terminal window and type the following:
 
 
 ```
@@ -82,10 +82,10 @@ after this we should have our starter application ready to be customized. If you
 
 As we mentioned earlier, the goal of this app is to display a list of students, and then use the filter functionality to narrow down the list. For this project we will use Cosmic JS to store our data, and also to server the data using the built-in Rest API that comes with Cosmic JS.
 
-* Signup for a free <a href="https://cosmicjs.com/pricing">Cosmic JS</a> account.
-* Add new bucket from the <a href="https://cosmicjs.com/buckets">develpment dashboard</a>
+* Signup for a free <a href="https://cosmicjs.com/pricing" target="_blank">Cosmic JS</a> account.
+* Add new bucket from the <a href="https://cosmicjs.com/buckets" target="_blank">develpment dashboard</a>
 * Add new `Object Type` from the dashboard. and specify the following attributes for this object type
-<img src="./images/cosmic-js-students-table.png"/>
+<img src="./images/cosmic-js-students-table.png" style="width: 500px; margin-left: auto; margin-right: auto; display: block;"/>
 * From the object type metafields tab, add the following fields:
 
 ```
@@ -101,11 +101,11 @@ As we mentioned earlier, the goal of this app is to display a list of students, 
     Zip: text field
 ```
 
-* Add some data into the Students table. If you want you can copy my data table from Cosmic JS by importing my <a href="https://cosmicjs.com/col-admin/dashboard">col-admin-bucket</a> under your account. I have inserted about 300 records, so you don't have to type all these information manually.
+* Add some data into the Students table. If you want you can copy my data table from Cosmic JS by importing my <a href="https://cosmicjs.com/col-admin/dashboard" target="_blank">col-admin-bucket</a> under your account. I have inserted about 300 records, so you don't have to type all these information manually.
 
 * Access your Cosmic JS data via the built-in Rest API from this url: `https://api.cosmicjs.com/v1/col-admin/objects?type=students`
 
-* Take a look to the <a href="https://cosmicjs.github.io/rest-api-docs/?javascript">Cosmic JS API Documentations</a> for a detailed list of all the APIs available for you.
+* Take a look to the <a href="https://cosmicjs.github.io/rest-api-docs/?javascript" target="_blank">Cosmic JS API Documentations</a> for a detailed list of all the APIs available for you.
 
 After this you should be able to access you backend data via the Rest API.
 
@@ -179,7 +179,7 @@ export default {
 }
 ```
 
-So far, we only have one function `fetchStudents`. This function will call the Cosmic JS `getObjects` to pull 25 records at a time. And it will do this inside a while loop until we reach the end or no more records can be found. We can identify the end of data of the data row count will be less than 25 records. After fetching all data from the Rest API we will call the `ADD_STUDENTS` mutation to store these records inside Vuex state variable. For more info about Vuex store, please read the <a href="https://vuex.vuejs.org">documentation</a>.
+So far, we only have one function `fetchStudents`. This function will call the Cosmic JS `getObjects` to pull 25 records at a time. And it will do this inside a while loop until we reach the end or no more records can be found. We can identify the end of data of the data row count will be less than 25 records. After fetching all data from the Rest API we will call the `ADD_STUDENTS` mutation to store these records inside Vuex state variable. For more info about Vuex store, please read the <a href="https://vuex.vuejs.org" target="_blank">documentation</a>.
 
 There is another call at the end of this function to `fetchStates`. This function will simply loop through all students records and get the unique state code and store it in `states` variable. This can be used later on the filter by state dropdown component.
 
@@ -240,7 +240,7 @@ export default new Vuex.Store({
 
 ## Application styling with Vuetify
 
-For this project we will use <a href="https://vuetifyjs.com/en/getting-started/quick-start">Vuetify</a> as our fron-end components libarary. This is very helpful, especially if you like to use <a href="https://material.io/design/introduction/">Google Material Design</a> into your project without a lot of overhead. Plus Vuetify is awesome because it has tons of built-in UI components that are fully loaded.
+For this project we will use <a href="https://vuetifyjs.com/en/getting-started/quick-start" target="_blank">Vuetify</a> as our fron-end components libarary. This is very helpful, especially if you like to use <a href="https://material.io/design/introduction/" target="_blank">Google Material Design</a> into your project without a lot of overhead. Plus Vuetify is awesome because it has tons of built-in UI components that are fully loaded.
 After adding Vuetify to your project using Vue CLI add command, you can just reference Vuetify components from your page templates.
 Let's take a look at the `App.vue` main layout.
 
@@ -483,7 +483,7 @@ The last piece is the actual Javascript functions that we will call for each fil
 ```
 The code above have two functions `filterByTextContains` and `filterByTextStartsWith` which will be called each time the user uses the text field filter function. And behind those two functions we call `filterByRegExp` which is basically a function that uses Javascript Regular expression function.
 In a similar way I have written filter functions for numeric fields, for date fields, and for lookup fields. I have used simple logic like date comparison, or array find, or plain old JS if statement. The most important part is that these function should be generic enough to work with any field, and expects few parameters like the data list that should be filtered, the field name and the field value.
-I encourage you to take a look at the code for <a href="https://github.com/mtermoul/col-admin/blob/master/src/views/Home.vue">Home.vue</a> for the full details.
+I encourage you to take a look at the code for <a href="https://github.com/mtermoul/col-admin/blob/master/src/views/Home.vue" target="_blank">Home.vue</a> for the full details.
 
 ## Using Vue computed properties, wathcers, and filters
 
@@ -516,4 +516,4 @@ As you can see, on app created event we are calling Vuex action by invoking the 
 At the end, I want to mention that building simple application like this sounds easy, however building an expandable app can take some thinking and a little planing to make sure that your code can easily allow future expanssions and changes without the need to rewrite the app.
 Also worth mentioning that, using an API ready back-end did certainly save us a lot of time. Lastly I want to add that after finishing the app I realize that the the Home.vue page could certainly be broken up into small components, and make it more readable and maintainable. So that would probably be the next step if you ever want to make a use of Vue Components.
 
-So, try the application <a href="http://col-admin.cosmicapp1.co">demo</a>, take a look at the <a href="https://github.com/mtermoul/col-admin">source code</a> and let me know what you think.
+So, try the application <a href="http://col-admin.cosmicapp1.co" target="_blank">demo</a>, take a look at the <a href="https://github.com/mtermoul/col-admin" target="_blank">source code</a> and let me know what you think.
