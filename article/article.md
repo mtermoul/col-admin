@@ -1,5 +1,7 @@
 # Add dynamic filters to your data with ease, using Vue, Cosmic JS Rest API.
 
+<img src="./images/home-filter-action.gif" style="display: block; margin-left: auto; margin-right: auto;"/>
+
 <img src="./images/main_screen_large.png" width="80%" alt="Data grid filter" style="display: block; margin-left: auto; margin-right: auto;">
 
 ## TL;DR
