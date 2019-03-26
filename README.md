@@ -1,6 +1,6 @@
 # col-admin: Client side grid lookup app with Vue, Cosmic JS, and Vuetify
 
-<img src="./article/images/main_screen_large.png" alt="Col-Admin Main Screen" />
+<img src="./article/images/home-filter-action.gif" style="display: block; margin-left: auto; margin-right: auto;"/>
 
 # Links
 
