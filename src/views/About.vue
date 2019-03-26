@@ -8,14 +8,6 @@
 <script>
 export default {
     name: 'about',
-    // methods: {
-    //     importStudents () {
-    //         this.$store.dispatch('importData')
-    //     },
-    //     fetchStudents () {
-    //         this.$store.dispatch('fetchStudents2')
-    //     }
-    // }
 }
 </script>
 
