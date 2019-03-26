@@ -85,8 +85,11 @@ As we mentioned earlier, the goal of this app is to display a list of students, 
 * Signup for a free <a href="https://cosmicjs.com/pricing" target="_blank">Cosmic JS</a> account.
 * Add new bucket from the <a href="https://cosmicjs.com/buckets" target="_blank">develpment dashboard</a>
 * Add new `Object Type` from the dashboard. and specify the following attributes for this object type
+
 <img src="./images/cosmic-js-students-table.png" style="width: 500px; margin-left: auto; margin-right: auto; display: block;"/>
+
 * From the object type metafields tab, add the following fields:
+
 
 ```
     SID: text field,
