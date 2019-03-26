@@ -4,9 +4,9 @@
 
 # Links
 
-<a href="#" target="_blank">Demo</a>
+<a href="http://col-admin.cosmicapp1.co" target="_blank">Demo</a>
 
-<a href="#" target="_blank">Tutorial article</a>
+<a href="./article/article.md" target="_blank">Tutorial article</a>
 
 # Libraries
 
