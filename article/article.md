@@ -48,7 +48,7 @@ The second part will be the filters that the user can use to filter the data wit
 
 So basically we can build 12 comparison function that we can use with all our fields or any fields that we may add in the future. So let's get started with our app and see how we can build these features.
 
-## Starting you Vue app
+## Starting your Vue app
 
 To start a new app, you will need to install <a href="https://vuejs.org/" target="_blank">Vue</a> and open new terminal window and type the following:
 
