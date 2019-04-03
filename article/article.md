@@ -1,9 +1,11 @@
 # Add dynamic filters to your data with ease, using Vue, Cosmic JS Rest API.
 
-<img src="./images/home-filter-action.gif" style="display: block; margin-left: auto; margin-right: auto;"/>
+<img src="./images/smartmockups_col_admin_2.jpg" style="display: block; margin-left: auto; margin-right: auto;"/>
 
 ## TL;DR
 
+* <a href="https://col-admin.cosmicapp1.co/" target="_blank">Demo</a>
+* <a href="https://github.com/mtermoul/col-admin" target="_blank">Souce code</a>
 * <a href="https://vuejs.org/" target="_blank">Vue</a>
 * <a href="https://vuex.vuejs.org/" target="_blank">Vuex</a>
 * <a href="https://vuetifyjs.com/en/" target="_blank">Vuetify</a>
@@ -11,7 +13,7 @@
 
 ## Intro
 
-Filtering data is one of the most common feature of any data facing application, wheather it's a fron-end app or a back-end application. The Filter function is used to find records in a table or a dataset that meets certain criteria. For examaple if you have a list called Books in a webpage, and you want to show only books that are currently on sale.  You could accomplish this using the filter function.
+Filtering data is one of the most common feature of any data facing application, whether it's a fron-end app or a back-end application. The Filter function is used to find records in a table or a dataset that meets certain criteria. For example if you have a list called Books in a webpage, and you want to show only books that are currently on sale.  You could accomplish this using the filter function.
 
 ## What are we building exactly?
 
@@ -83,7 +85,7 @@ after this we should have our starter application ready to be customized. If you
 As we mentioned earlier, the goal of this app is to display a list of students, and then use the filter functionality to narrow down the list. For this project we will use Cosmic JS to store our data, and also to server the data using the built-in Rest API that comes with Cosmic JS.
 
 * Signup for a free <a href="https://cosmicjs.com/pricing" target="_blank">Cosmic JS</a> account.
-* Add new bucket from the <a href="https://cosmicjs.com/buckets" target="_blank">develpment dashboard</a>
+* Add new bucket from the <a href="https://cosmicjs.com/buckets" target="_blank">development dashboard</a>
 * Add new `Object Type` from the dashboard. and specify the following attributes for this object type
 
 <img src="./images/cosmic-js-students-table.png" style="width: 500px; margin-left: auto; margin-right: auto; display: block;"/>
@@ -243,7 +245,7 @@ export default new Vuex.Store({
 
 ## Application styling with Vuetify
 
-For this project we will use <a href="https://vuetifyjs.com/en/getting-started/quick-start" target="_blank">Vuetify</a> as our fron-end components libarary. This is very helpful, especially if you like to use <a href="https://material.io/design/introduction/" target="_blank">Google Material Design</a> into your project without a lot of overhead. Plus Vuetify is awesome because it has tons of built-in UI components that are fully loaded.
+For this project we will use <a href="https://vuetifyjs.com/en/getting-started/quick-start" target="_blank">Vuetify</a> as our fron-end components library. This is very helpful, especially if you like to use <a href="https://material.io/design/introduction/" target="_blank">Google Material Design</a> into your project without a lot of overhead. Plus Vuetify is awesome because it has tons of built-in UI components that are fully loaded.
 After adding Vuetify to your project using Vue CLI add command, you can just reference Vuetify components from your page templates.
 Let's take a look at the `App.vue` main layout.
 
@@ -281,22 +283,22 @@ export default {
 ```
 
 In the template above you can see that our application page layout has three sections:
-* v-toolbar: wich is the top toolbar component
+* v-toolbar: which is the top toolbar component
 * v-content: which will contain the inner content of any page
 * v-footer: which will have the app copyright and contact info
 
 ## Adding application view and components
 
 You may notice that under the './src' folder, there are two folders:
-* ./src/components: this folder will be used to store all web components that can be used inside any page. Curretnly we don't any components yet! but if our app become more complex, we could easily break each page into small components.
-* ./src/views: This folder is used to store views. A view is the equivilant to a web page. Currently we have the `Home.vue` which is the main page, and the `About.vue`
+* ./src/components: this folder will be used to store all web components that can be used inside any page. Currently we don't use any components yet! but if our app become more complex, we could easily break each page into small components.
+* ./src/views: This folder is used to store views. A view is the equivilent to a web page. Currently we have the `Home.vue` which is the main page, and the `About.vue`
 
-## Adding datagrid to main page
+## Adding data-grid to main page
 
 In the `Home.vue` page we will have two main sections:
 
 * data filters: which contains all filters that the user can select.
-* data grid: this the students list displyed as a data grid component. For our purpose we will use Vuetify `data-table` component.
+* data grid: this the students list displayed as a data grid component. For our purpose we will use Vuetify `data-table` component.
 
 So let's take a look at the home page template:
 
@@ -384,8 +386,8 @@ So let's take a look at the home page template:
 
 As you can see, from the code above. the `v-data-table` component is using `filteredStudents` variable as it's data source. Inside Vuex store we have two state variables:
 
-* students: an array wich contains all students that are fetched from the database.
-* filterdStudents: an array wchich contains only the students matching the filter criteria. Intially, if no filter is selected, then this variable will have exact same value as the `students` variable.
+* students: an array which contains all students that are fetched from the database.
+* filterdStudents: an array which contains only the students matching the filter criteria. Initially, if no filter is selected, then this variable will have exact same value as the `students` variable.
 
 The `data-table` component also has three sections:
 
@@ -400,7 +402,7 @@ As seen in the Home.vue page template the filters components consist of the foll
 * Filter By: currently we have to select one of the available fields like firstName, lastName, dob...
 * Filter Operator: this will be something like `Contains`, 'Start with', 'Greater than'... The operators will change based on the field type
 * Filter Term: this is the user input for the selected filter. Currently we have two filter terms in case if we need to select a range. For instance if the user selects date of birth between, then we need two date input fields.
-* Filter lookup: is a dropdown in case if the filter criteria needs to be selected from a given list. In our app, when we need to filter by State, then we need to selec a value from a a dropdown field.
+* Filter lookup: is a dropdown in case if the filter criteria needs to be selected from a given list. In our app, when we need to filter by State, then we need to select a value from a a dropdown field.
 
 ## Add filter functionality
 
@@ -436,7 +438,7 @@ This the data table headers.
         {text: 'State', value: 'state', type: 'lookup'}
     ],
 ```
-This is the list of filter fields that the user can select. You can also see that I added a type for each filter field. Filter type will be used lated to dicide wchich function will be called to run the filter operations. Many fields will have the same data types, therefore we don't need to call a separate function to filter by that field. We will call the same function for all fields that share the same data type.
+This is the list of filter fields that the user can select. You can also see that I added a type for each filter field. Filter type will be used lated to decide which function will be called to run the filter operations. Many fields will have the same data types, therefore we don't need to call a separate function to filter by that field. We will call the same function for all fields that share the same data type.
 
 
 ```
@@ -488,11 +490,11 @@ The code above have two functions `filterByTextContains` and `filterByTextStarts
 In a similar way I have written filter functions for numeric fields, for date fields, and for lookup fields. I have used simple logic like date comparison, or array find, or plain old JS if statement. The most important part is that these function should be generic enough to work with any field, and expects few parameters like the data list that should be filtered, the field name and the field value.
 I encourage you to take a look at the code for <a href="https://github.com/mtermoul/col-admin/blob/master/src/views/Home.vue" target="_blank">Home.vue</a> for the full details.
 
-## Using Vue computed properties, wathcers, and filters
+## Using Vue computed properties, watchers, and filters
 
 You can also find inside './src/views/Home.vue' a couple methods under computed, watch, and filters. Here is how and why I use each type for.
 
-* Computed: I have used these computed properties for `students`, `filteredStudents`, `isDataReady`, `states`. these properties will update automaticaly anytime the underlying variables which comes from Vuex store changes. This is useful especially if you bind the computed properties to the UI elements, and make UI changes or toggle between UI sections whenever the data inside the computed properties got updated. For instance `isDataReady` is used in the data table whenever it's `false` then the UI will play a waiting animation progress bar that tells the user that the data is loading. Once the `idDataReady` is updated to `true`, then the is loading progress bar will disappear, and the table will show the actual data.
+* Computed: I have used these computed properties for `students`, `filteredStudents`, `isDataReady`, `states`. these properties will update automatically anytime the underlying variables which comes from Vuex store changes. This is useful especially if you bind the computed properties to the UI elements, and make UI changes or toggle between UI sections whenever the data inside the computed properties got updated. For instance `isDataReady` is used in the data table whenever it's `false` then the UI will play a waiting animation progress bar that tells the user that the data is loading. Once the `idDataReady` is updated to `true`, then the is loading progress bar will disappear, and the table will show the actual data.
 
 * Watchers: I have used these watched properties `filterField`, and `filterOperator`. the difference is that the watched properties does not cache the value, and each time the underlying data changes, the function will be called. I have used this to update the filter UI elements on the home page.
 
@@ -513,6 +515,9 @@ new Vue({
 }).$mount('#app')
 ```
 As you can see, on app created event we are calling Vuex action by invoking the dispatch methods. this is very useful if you want to trigger actions automatically without waiting for user actions.
+And this is the final result. Please take a look at the application demo for a test drive.
+
+<img src="./images/home-filter-action.gif" style="display: block; margin-left: auto; margin-right: auto;"/>
 
 ## Conclusion
 

@@ -12,6 +12,8 @@
 
         <v-footer :fixed="fixed" app color="green accent-4">
             <span>&copy; 2017</span>
+            <v-spacer></v-spacer>
+            <span class="pr-3 caption">Proudly powered by <a href="https://cosmicjs.com/" target="_blank">Cosmic JS</a></span>
         </v-footer>
     </v-app>
 </template>
